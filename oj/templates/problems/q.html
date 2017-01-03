@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <style>
+        input[type="text"] {
+            padding: 300px 300px;
+            line-height: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    This is a problems You have to solve
+    <h1>
+
+        <form action="submit/" method="post">
+            {% csrf_token %}
+            <textarea rows="40" cols="70" name="code"></textarea>
+            <h1>
+                <button type="submit" id="register" class="button button-block" />Get Started</button>
+        </form>
+</body>
+
+</html>
