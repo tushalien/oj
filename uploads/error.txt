@@ -1,0 +1,34 @@
+env/code.cpp:3:7: error: expected nested-name-specifier before ‘namespae’
+ using namespae std;
+       ^
+env/code.cpp: In function ‘int main()’:
+env/code.cpp:10:5: error: ‘cin’ was not declared in this scope
+     cin >> a;
+     ^
+env/code.cpp:10:5: note: suggested alternative:
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:74:0,
+                 from env/code.cpp:1:
+/usr/include/c++/5/iostream:60:18: note:   ‘std::cin’
+   extern istream cin;  /// Linked to standard input
+                  ^
+env/code.cpp:18:6: error: ‘cout’ was not declared in this scope
+      cout << fib[i] << endl ;
+      ^
+env/code.cpp:18:6: note: suggested alternative:
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:74:0,
+                 from env/code.cpp:1:
+/usr/include/c++/5/iostream:61:18: note:   ‘std::cout’
+   extern ostream cout;  /// Linked to standard output
+                  ^
+env/code.cpp:18:24: error: ‘endl’ was not declared in this scope
+      cout << fib[i] << endl ;
+                        ^
+env/code.cpp:18:24: note: suggested alternative:
+In file included from /usr/include/c++/5/istream:39:0,
+                 from /usr/include/c++/5/sstream:38,
+                 from /usr/include/c++/5/complex:45,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:66,
+                 from env/code.cpp:1:
+/usr/include/c++/5/ostream:590:5: note:   ‘std::endl’
+     endl(basic_ostream<_CharT, _Traits>& __os)
+     ^

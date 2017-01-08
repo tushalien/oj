@@ -1,0 +1,10 @@
+{% for obj in problem %}
+{{ obj.problem_code }}
+<br>
+{{ obj.problem_name }}
+<br>
+{{ obj.problem_type }}
+<br>
+
+<a href="{% url 'problem:solve' obj.problem_code %}">{{ obj.problem_code }}</a>
+{% endfor %}
