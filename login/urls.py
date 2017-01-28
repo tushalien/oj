@@ -24,6 +24,9 @@ urlpatterns = [
     url(r'^admin2/', include(admin.site.urls)),
     url(r'^', include('main.urls', namespace='main')),
     url(r'^accounts/', include('accounts.urls', namespace='accounts')),
+    url(r'^contests/', include('contests.urls', namespace='contests')),
+
+
     url(r'^editproblem/', include('problem.urls', namespace='editproblem')),
     url(r'^submit/', include('submission.urls', namespace='code_editor')),
 

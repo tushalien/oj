@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'main',
     'submission',
     'problem',
+    'contests',
     'accounts',
    
     # 'api',

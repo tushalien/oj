@@ -21,7 +21,7 @@ def solve(request,pk):
 def solved(request):
 	if request.method=='POST':
 		lang=request.POST['language']
-		code=request.POST['code']
+		code=request.POST['codeode']
 		uid=2
 		rid=2
 		pid=2
