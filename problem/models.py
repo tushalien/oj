@@ -65,6 +65,6 @@ class Problems(models.Model):
     total = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'problems'
         verbose_name_plural = 'problems'

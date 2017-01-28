@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-# from .forms import SubmitForm
+from .forms import SubmitForm
 #from judge import runjudge
-# from .models import Submit,Runs
+from .models import Submissions
 from subprocess import Popen, PIPE
 
 def solve(request,pk):
@@ -23,12 +23,13 @@ def solved(request):
 		lang=request.POST['language']
 		code=request.POST['code']
 		uid=2
+		rid=2
 		pid=2
-		sub=Submit(language=lang,code_upload=code,code=pid)
+		sub=Submissions(rid=rid,language=lang,tid=uid,code=code,pid=pid)
 		sub.save()
 		# run=Runs(language=lang,pid=pid,tid=uid)
 		# run.save()
-		rid=42
+		rid=1
 		#runjudge(rid)
 
 		cmd = "python3 /home/tushalien/Desktop/final/login/submission/judge.py "+str(rid)
@@ -48,5 +49,6 @@ def solved(request):
 		# }
 		return render(request,"submission.html")
 	else:
-		return render(request,"submissions.html")
+		print "not"
+		return render(request,"submission.html")
 
